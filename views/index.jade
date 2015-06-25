@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome #{title}
+  div(ng-app="module-user")
+      div(ng-controller="userController")
+          div(ng-init="init()")
+              input(type="text", placeholder="new user", ng-model="nameNewUser")
+              button(ng-click="createUser()", ng-show="userUpdate.user_name==null") add
+              button(ng-click="updateUser()", ng-show="userUpdate.user_name!=null") update
+              button(ng-click="cancelUpdate()", ng-show="userUpdate.user_name!=null") cancelar
+              h3 List of users
+              div
+                  table
+                       tr(ng-repeat="user in users")
+                           td {{user.user_id}}
+                           td {{user.user_name}}
+                           td
+                               button(ng-click="setUpdateUser(user.user_id)") update
+                               button(ng-click="deleteUser(user.user_id)") delete
+  script(src="/javascripts/angular/angular.min.js")
+  script(src="/javascripts/angular/modules/module-user.js")
