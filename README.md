@@ -13,9 +13,7 @@ user_name VARCHAR(30)
 );
 ```
 
-Second: Change the data of your MySQL connection on
-
-/database/connection/mysql_connection.mysql
+Second: Change the data of your MySQL connection on "/database/connection/mysql_connection.mysql"
 
 Third: Run this commands in proyect directory
 
