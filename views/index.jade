@@ -2,7 +2,6 @@ extends layout
 
 block content
   h1= title
-  p Welcome #{title}
   div(ng-app="module-user")
       div(ng-controller="userController")
           div(ng-init="init()")

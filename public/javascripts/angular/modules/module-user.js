@@ -9,6 +9,9 @@ moduleUser.controller("userController", function ($scope, $http){
     $scope.getUsers();
   };
 
+  /**
+  * GET ALL USERS DB
+  */
   $scope.getUsers = function () {
     $http.get("/users/getUsers").success(function (users) {
       $scope.users = users;
