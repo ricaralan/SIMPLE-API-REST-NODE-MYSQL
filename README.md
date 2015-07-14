@@ -13,7 +13,11 @@ user_name VARCHAR(30)
 );
 ```
 
-Second: Run this commands in root directory
+Second: Change the data of your MySQL connection on
+
+/database/connection/mysql_connection.mysql
+
+Third: Run this commands in proyect directory
 
 ```shell
 npm install
